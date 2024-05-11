@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\ProductoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::resource('marcas', MarcaController::class);
+
+Route::resource('productos', ProductoController::class);
