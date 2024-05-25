@@ -15,12 +15,12 @@
         <div class="alert alert-success mt-2">
             <strong>{{Session::get('success')}}</strong>
         </div>
-    
+
     @endif
 
     <div class="col-12 mt-4">
         <table class="table table-bordered text-white">
-            <tr class="fw-bold" >
+            <tr class="fw-bold">
                 <th>Nombre</th>
                 <th>Pais de origen</th>
                 <th>Descripción</th>
@@ -32,7 +32,7 @@
                     <td>{{$marca->pais_origen}}</td>
                     <td>{{$marca->descripcion}}</td>
                     <td>
-                        <a href="{{route('marcas.edit',$marca)}}" class="btn btn-warning">Editar</a>
+                        <a href="{{route('marcas.edit', $marca)}}" class="btn btn-warning">Editar</a>
 
                         <form action="{{route('marcas.destroy', $marca)}}" method="POST" class="d-inline">
                             @csrf
@@ -42,7 +42,7 @@
                     </td>
                 </tr>
             @endforeach
-        
+
         </table>
         {{$marcas->links()}}
     </div>

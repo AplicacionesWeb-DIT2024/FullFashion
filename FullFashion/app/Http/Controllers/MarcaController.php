@@ -15,7 +15,7 @@ class MarcaController extends Controller
     public function index(): View
     {
         $marcas = Marca::paginate(4);
-        return view('index', ['marcas'=> $marcas]);
+        return view('indexMarca', ['marcas'=> $marcas]);
     }
 
     /**
@@ -23,7 +23,7 @@ class MarcaController extends Controller
      */
     public function create(): View
     {
-        return view('create');
+        return view('createMarca');
     }
 
     /**
@@ -52,7 +52,7 @@ class MarcaController extends Controller
      */
     public function edit(Marca $marca): View
     {
-        return view('edit', ['marca'=> $marca]);
+        return view('editMarca', ['marca'=> $marca]);
     }
 
     /**
