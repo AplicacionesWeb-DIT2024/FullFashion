@@ -9,5 +9,8 @@
         <div class="card-footer">
             <a href="{{ route('marcas.index') }}" class="btn btn-primary">{{ __('Gestión de Marcas') }}</a>
         </div>
+        <div class="card-footer">
+            <a href="{{ route('productos.index') }}" class="btn btn-primary">{{ __('Gestión de Productos') }}</a>
+        </div>
     </div>
 @endsection
